@@ -94,7 +94,7 @@ function getPassLength() {
   let passLenght = parseInt(prompt("Enter the lenght for the password (between 8 and 128 characters)"))
   if (passLenght < 8 || passLenght > 128) {
     alert ("Please enter a number between 8 and 128")
-    getPassLength();
+    return getPassLength();
   }
   return passLenght;
 }
@@ -109,7 +109,7 @@ function getPasswordOptions() {
 
   if (!hasSpecialChar && !hasNumericChar && !hasUpperCaseChar && !hasLowerCasedChar ) {
     alert ("Please select at least one character type")
-    getPasswordOptions();
+    return getPasswordOptions();
   }
 
   return {
