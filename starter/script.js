@@ -88,8 +88,20 @@ const upperCasedCharacters = [
   'Z'
 ];
 
+// Function to prompt user for password length
+  
+function getPassLength() {
+  let passLenght = parseInt(prompt("Enter the lenght for the password (between 8 and 128 characters"))
+  if (passLenght < 8 || passLenght > 128) {
+    alert ("Please enter a number between 8 and 128")
+    getLength();
+  }
+  return passLenght;
+}
+
 // Function to prompt user for password options
 function getPasswordOptions() {
+  
 }
 
 // Function for getting a random element from an array
@@ -99,8 +111,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-}
 
+}
 // Get references to the #generate element
 const generateBtn = document.querySelector('#generate');
 
