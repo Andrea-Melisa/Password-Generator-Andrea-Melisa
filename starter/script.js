@@ -98,7 +98,6 @@ function getPassLength() {
   }
   return passLenght;
 }
-getPassLength()
 
 // Function to prompt user for password options
 
@@ -120,7 +119,6 @@ function getPasswordOptions() {
     selectLowerCasedChar: hasLowerCasedChar
   };
 }
-getPasswordOptions()
 
 // Function for getting a random element from an array
 
@@ -130,9 +128,40 @@ function getRandom(arr) {
 }
 
 // Function to generate password with user input
-function generatePassword() {
 
+function generatePassword() {
+  let passLenghtFromPrompt = getPassLength();
+  let userOptions = getPasswordOptions();
+  let password = [];
+  let megaArr = [];
+
+  if( userOptions.selectLowerCasedChar ) {
+    passwordAggregator(lowerCasedCharacters);
+  }
+  if( userOptions.selectUpperCaseChar ) {
+    passwordAggregator(upperCasedCharacters);
+  }
+  if( userOptions.selectNumericChar ) {
+    passwordAggregator(numericCharacters);
+  }
+  if( userOptions.selectSpecialChar ) {
+    passwordAggregator(specialCharacters);
+  }
+
+  while (password.length < passLenghtFromPrompt) {
+    let generatedCharacter = getRandom(megaArr);
+    password.push(generatedCharacter);
+  }
+
+  return password.join('');
+
+  function passwordAggregator(characters) {
+    let generatedChar = getRandom(characters);
+    password.push(generatedChar);
+    megaArr = megaArr.concat(characters);
+  }
 }
+
 // Get references to the #generate element
 const generateBtn = document.querySelector('#generate');
 
