@@ -56,7 +56,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 Please refer to the LICENSE in the repo.
 
 ## Badges
-<!-- 
-JavaScript 47.5%
-CSS 36.1%
-HTML 16.4% -->
+
+JavaScript 52.7%
+CSS 31.4%
+HTML 15.9%
