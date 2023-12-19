@@ -31,12 +31,13 @@ The application should do what follows:
 N/A
 
 ## Usage
-<!-- To use the application here you have the link to the deployed webpage: https://andrea-melisa.github.io/Password-Generator-Andrea-Melisa/ -->
+To use the application here you have the link to the deployed webpage: https://andrea-melisa.github.io/Password-Generator-Andrea-Melisa/
+
 Click on the generate button and answer the questions on the boxes.
 
 Here you have a screenshot from the web page:
 
-<!-- ![web intro](assets/images/WebPortfolioScreenshot.png) -->
+![web intro](Images/Screenshot1.png)
 
 ## Credits
 
