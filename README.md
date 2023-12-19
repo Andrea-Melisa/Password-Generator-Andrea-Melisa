@@ -57,6 +57,6 @@ Please refer to the LICENSE in the repo.
 
 ## Badges
 
-JavaScript 52.7%
-CSS 31.4%
-HTML 15.9%
+- JavaScript 52.7%
+- CSS 31.4%
+- HTML 15.9%
