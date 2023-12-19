@@ -91,18 +91,36 @@ const upperCasedCharacters = [
 // Function to prompt user for password length
   
 function getPassLength() {
-  let passLenght = parseInt(prompt("Enter the lenght for the password (between 8 and 128 characters"))
+  let passLenght = parseInt(prompt("Enter the lenght for the password (between 8 and 128 characters)"))
   if (passLenght < 8 || passLenght > 128) {
     alert ("Please enter a number between 8 and 128")
-    getLength();
+    getPassLength();
   }
   return passLenght;
 }
+getPassLength();
 
 // Function to prompt user for password options
+
 function getPasswordOptions() {
-  
+  let hasSpecialChar = confirm("OK if you'd like to include special characters?")
+  let hasNumericChar = confirm("OK if you'd like to include Numeric characters?")
+  let hasUpperCaseChar = confirm("OK if you'd like to include Uppercase characters?")
+  let hasLowerCasedChar = confirm("OK if you'd like to include lowecase characters?")
+
+  if (!hasSpecialChar && !hasNumericChar && !hasUpperCaseChar && !hasLowerCasedChar ) {
+    alert ("Please select at least one character type")
+    getPasswordOptions();
+  }
+
+  return {
+    selectSpecialChar: hasSpecialChar,
+    selectNumericChar: hasNumericChar,
+    selectUpperCaseChar: hasUpperCaseChar, 
+    selectLowerCasedChar: hasLowerCasedChar
+  };
 }
+getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
