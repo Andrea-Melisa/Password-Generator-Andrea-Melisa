@@ -102,10 +102,10 @@ function getPassLength() {
 // Function to prompt user for password options
 
 function getPasswordOptions() {
-  let hasSpecialChar = confirm("OK if you'd like to include special characters?")
+  let hasSpecialChar = confirm("OK if you'd like to include Special characters?")
   let hasNumericChar = confirm("OK if you'd like to include Numeric characters?")
   let hasUpperCaseChar = confirm("OK if you'd like to include Uppercase characters?")
-  let hasLowerCasedChar = confirm("OK if you'd like to include lowecase characters?")
+  let hasLowerCasedChar = confirm("OK if you'd like to include Lowercase characters?")
 
   if (!hasSpecialChar && !hasNumericChar && !hasUpperCaseChar && !hasLowerCasedChar ) {
     alert ("Please select at least one character type")
